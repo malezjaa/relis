@@ -95,24 +95,6 @@ const runBasedOnRuntime = async (options: {
     realArgs.push('-c', script);
   }
 
-  // if (Configuration.useBun) {
-  //   return Bun.spawnSync([command as string, ...realArgs], {
-  //     env: options.env,
-  //     windowsVerbatimArguments: options.windowsVerbatimArguments,
-  //     stdout: 'inherit',
-  //     stderr: 'inherit',
-  //   });
-  // }
-  //
-  // const execa = await import('execa');
-  //
-  // await execa.execa(command as string, realArgs, {
-  //   env: options.env,
-  //   stderr: 'inherit',
-  //   stdout: 'inherit',
-  //   windowsVerbatimArguments: options.windowsVerbatimArguments,
-  // });
-
   await runCommand(command as string, realArgs, {
     env: options.env,
     windowsVerbatimArguments: options.windowsVerbatimArguments,
