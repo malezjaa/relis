@@ -1,0 +1,20 @@
+{
+  "name": "@litcord/test",
+  "version": "4.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "changelogen": "^0.5.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "prepack": "unbuild"
+  },
+  "dependencies": {
+    "unbuild": "^2.0.0"
+  },
+  "files": ["dist"]
+}
