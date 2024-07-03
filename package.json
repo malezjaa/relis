@@ -1,0 +1,60 @@
+{
+  "name": "relis",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "briojs/relis",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "bnp": "dist/cli.mjs"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "unbuild",
+    "lint": "eslint . && biome check .",
+    "lint:fix": "automd && eslint . --fix && biome check --apply .",
+    "format": "biome format --write",
+    "test": "vitest",
+    "prepack": "bun run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.0",
+    "@types/bun": "latest",
+    "@types/fs-extra": "^11.0.4",
+    "@types/npm-package-arg": "^6.1.4",
+    "@types/npmcli__arborist": "^5.6.9",
+    "@types/npmcli__config": "^6.0.3",
+    "@types/pacote": "^11.1.8",
+    "@types/ssri": "^7.1.5",
+    "@types/which": "^3.0.4",
+    "eslint": "^9.4.0",
+    "eslint-config-briojs": "^0.0.9",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@npmcli/arborist": "7.5.2",
+    "@npmcli/config": "^8.3.3",
+    "c12": "^1.11.1",
+    "ci-info": "^4.0.0",
+    "coloid": "^0.0.2",
+    "convert-gitmoji": "^0.1.5",
+    "curzon": "^0.0.8",
+    "execa": "^9.3.0",
+    "fs-extra": "^11.2.0",
+    "npm-package-arg": "^11.0.2",
+    "pacote": "^18.0.6",
+    "pathe": "^1.1.2",
+    "pkg-types": "^1.1.1",
+    "pretty-bytes": "^6.1.1",
+    "semver": "^7.6.2",
+    "ssri": "^10.0.6",
+    "tar": "^7.4.0",
+    "ufo": "^1.5.3",
+    "which": "^4.0.0",
+    "zap-fetch": "^0.0.0"
+  }
+}
